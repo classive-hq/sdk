@@ -223,4 +223,3 @@ class Organisation(Resource):
     async def update_limits(self, input: models.Limits, *, options: RequestOptions | None = None) -> models.Limits:
         """Update organisation spending and concurrency limits (PATCH /v1/organisation/limits)."""
         return await self._transport.request("PATCH", f"/v1/organisation/limits", input, None, options, "json")
-

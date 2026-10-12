@@ -929,4 +929,3 @@ class SourceCoverageMaterialsItemSelectedSectionsItem(TypedDict):
     start: int
     end: int
     complete: bool
-

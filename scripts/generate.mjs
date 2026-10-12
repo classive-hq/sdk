@@ -142,7 +142,8 @@ for(const group of groups) {
 files['docs/reference.md']=reference;
 for (const [path, content] of Object.entries(files)) {
   const url = new URL('../'+path,import.meta.url);
-  if (process.argv.includes('--check')) { if (await readFile(url,'utf8')!==content) throw new Error('Generated contract drift: '+path); }
-  else await writeFile(url,content);
+  const normalized=content.trimEnd()+'\n';
+  if (process.argv.includes('--check')) { if (await readFile(url,'utf8')!==normalized) throw new Error('Generated contract drift: '+path); }
+  else await writeFile(url,normalized);
 }
 console.log(`${process.argv.includes('--check')?'Checked':'Generated'} ${operations.length} operations for both SDKs.`);
