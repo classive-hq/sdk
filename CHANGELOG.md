@@ -1,5 +1,11 @@
 # Changelog
 
+## JavaScript 0.1.2 — 2026-10-13
+
+- Update installation instructions for npm and remove publishing-status commentary.
+- Use GitHub URLs for guides and examples so links work on the npm package page.
+- Python remains at 0.1.1.
+
 ## 0.1.1 — 2026-10-12
 
 - Move the JavaScript build hook to packaging, so installing the prebuilt package needs no install-time build script.
@@ -11,5 +17,3 @@
 - Quote/submission, polling, extraction readiness, pagination, streaming downloads and raw JSON helpers.
 - Typed errors, bounded GET retries, explicit mutation behavior and webhook signature verification.
 - Transport and workflow tests, package-consumer tests, examples and CI for minimum supported runtimes.
-
-This initial release is distributed through GitHub release assets; npm/PyPI publication is pending.

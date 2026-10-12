@@ -4,7 +4,7 @@ JavaScript/TypeScript and Python clients for the [Classive Results API](https://
 
 Both clients cover all 52 public API operations. JavaScript supports ESM and CommonJS on Node.js 20+. Python supports synchronous and native asynchronous clients on Python 3.11+.
 
-Language guides: [JavaScript and TypeScript](javascript/README.md) · [Python](python/README.md).
+Language guides: [JavaScript and TypeScript](https://github.com/classive-hq/sdk/blob/main/javascript/README.md) · [Python](https://github.com/classive-hq/sdk/blob/main/python/README.md).
 
 ## Install
 
@@ -14,13 +14,11 @@ Install JavaScript/TypeScript from npm:
 npm install @classive/sdk
 ```
 
-Until PyPI publishing is completed, install Python from the [v0.1.1 release](https://github.com/classive-hq/sdk/releases/tag/v0.1.1):
+Install Python:
 
 ```sh
 python -m pip install https://github.com/classive-hq/sdk/releases/download/v0.1.1/classive_sdk-0.1.1-py3-none-any.whl
 ```
-
-The npm package is published. PyPI publication is pending; `pip install classive-sdk` is not advertised as available yet. You can also clone this repository and run `npm install && npm run build` or `python -m pip install ./python`.
 
 Create a REST API key in your [dashboard](https://classive.app/app/keys) and set `CLASSIVE_API_KEY` in your server environment. MCP keys are different and cannot authenticate this SDK. Keep the key out of browser code and source control.
 
@@ -118,7 +116,7 @@ asyncio.run(main())
 | Cancel server work | `jobs.cancel(id)` | `jobs.cancel(id)` |
 | Manage billing, keys and webhooks | `billing`, `keys`, `webhooks` | `billing`, `keys`, `webhooks` |
 
-See [workflow examples](docs/workflows.md), the [complete method reference](docs/reference.md), and [runnable examples](examples). Upload only material you have the right to use. Extraction readiness is separate from a lesson's selected/covered source sections.
+See [workflow examples](https://github.com/classive-hq/sdk/blob/main/docs/workflows.md), the [complete method reference](https://github.com/classive-hq/sdk/blob/main/docs/reference.md), and [runnable examples](https://github.com/classive-hq/sdk/tree/main/examples). Upload only material you have the right to use. Extraction readiness is separate from a lesson's selected/covered source sections.
 
 ## Errors, retries and timeouts
 

@@ -1,14 +1,32 @@
 {
   "name": "@classive/sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "JavaScript and TypeScript SDK for the Classive Results API",
   "type": "module",
   "main": "./javascript/dist/index.js",
   "types": "./javascript/dist/index.d.ts",
-  "exports": {".": {"types": "./javascript/dist/index.d.ts", "import": "./javascript/dist/index.js", "require": "./javascript/dist-cjs/index.js", "default": "./javascript/dist/index.js"}},
-  "files": ["javascript/dist", "javascript/dist-cjs", "README.md", "CHANGELOG.md", "LICENSE"],
-  "engines": {"node": ">=20"},
-  "repository": {"type": "git", "url": "https://github.com/classive-hq/sdk.git"},
+  "exports": {
+    ".": {
+      "types": "./javascript/dist/index.d.ts",
+      "import": "./javascript/dist/index.js",
+      "require": "./javascript/dist-cjs/index.js",
+      "default": "./javascript/dist/index.js"
+    }
+  },
+  "files": [
+    "javascript/dist",
+    "javascript/dist-cjs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/classive-hq/sdk.git"
+  },
   "homepage": "https://github.com/classive-hq/sdk",
   "bugs": "https://github.com/classive-hq/sdk/issues",
   "license": "MIT",
@@ -19,5 +37,8 @@
     "test": "npm run check:generated && npm run build && node --test javascript/test/*.test.mjs",
     "prepack": "npm run build"
   },
-  "devDependencies": {"@types/node": "^22.0.0", "typescript": "~5.9.3"}
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.9.3"
+  }
 }
