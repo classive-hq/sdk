@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling>=1.25,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "classive-sdk"
+version = "0.1.0"
+description = "Synchronous and asynchronous Python SDK for the Classive Results API"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["httpx>=0.27,<1"]
+
+[project.urls]
+Homepage = "https://github.com/classive-hq/sdk"
+Documentation = "https://github.com/classive-hq/sdk/blob/main/README.md"
+Issues = "https://github.com/classive-hq/sdk/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/classive"]

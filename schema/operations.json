@@ -1,0 +1,470 @@
+[
+  {
+    "operationId": "voicePreview",
+    "resource": "voices",
+    "javascript": "preview",
+    "python": "preview",
+    "method": "GET",
+    "path": "/voices/{id}/preview",
+    "idempotency": false
+  },
+  {
+    "operationId": "createJob",
+    "resource": "jobs",
+    "javascript": "create",
+    "python": "create",
+    "method": "POST",
+    "path": "/v1/jobs",
+    "idempotency": true
+  },
+  {
+    "operationId": "listJobs",
+    "resource": "jobs",
+    "javascript": "list",
+    "python": "list",
+    "method": "GET",
+    "path": "/v1/jobs",
+    "idempotency": false
+  },
+  {
+    "operationId": "estimateJob",
+    "resource": "jobs",
+    "javascript": "estimate",
+    "python": "estimate",
+    "method": "POST",
+    "path": "/v1/jobs/estimate",
+    "idempotency": false
+  },
+  {
+    "operationId": "getJob",
+    "resource": "jobs",
+    "javascript": "get",
+    "python": "get",
+    "method": "GET",
+    "path": "/v1/jobs/{id}",
+    "idempotency": false
+  },
+  {
+    "operationId": "getJobUsage",
+    "resource": "jobs",
+    "javascript": "usage",
+    "python": "usage",
+    "method": "GET",
+    "path": "/v1/jobs/{id}/usage",
+    "idempotency": false
+  },
+  {
+    "operationId": "createRevision",
+    "resource": "jobs",
+    "javascript": "revise",
+    "python": "revise",
+    "method": "POST",
+    "path": "/v1/jobs/{id}/revisions",
+    "idempotency": true
+  },
+  {
+    "operationId": "getFile",
+    "resource": "files",
+    "javascript": "download",
+    "python": "download",
+    "method": "GET",
+    "path": "/v1/files/{id}",
+    "idempotency": false
+  },
+  {
+    "operationId": "uploadMaterial",
+    "resource": "materials",
+    "javascript": "create",
+    "python": "create",
+    "method": "POST",
+    "path": "/v1/materials",
+    "idempotency": false
+  },
+  {
+    "operationId": "listMaterials",
+    "resource": "materials",
+    "javascript": "list",
+    "python": "list",
+    "method": "GET",
+    "path": "/v1/materials",
+    "idempotency": false
+  },
+  {
+    "operationId": "listVoices",
+    "resource": "voices",
+    "javascript": "list",
+    "python": "list",
+    "method": "GET",
+    "path": "/v1/voices",
+    "idempotency": false
+  },
+  {
+    "operationId": "getPreferenceExamples",
+    "resource": "preferences",
+    "javascript": "examples",
+    "python": "examples",
+    "method": "GET",
+    "path": "/v1/preferences/examples",
+    "idempotency": false
+  },
+  {
+    "operationId": "getPrices",
+    "resource": "prices",
+    "javascript": "get",
+    "python": "get",
+    "method": "GET",
+    "path": "/v1/prices",
+    "idempotency": false
+  },
+  {
+    "operationId": "listKeys",
+    "resource": "keys",
+    "javascript": "list",
+    "python": "list",
+    "method": "GET",
+    "path": "/v1/keys",
+    "idempotency": false
+  },
+  {
+    "operationId": "createKey",
+    "resource": "keys",
+    "javascript": "create",
+    "python": "create",
+    "method": "POST",
+    "path": "/v1/keys",
+    "idempotency": false
+  },
+  {
+    "operationId": "revokeKey",
+    "resource": "keys",
+    "javascript": "revoke",
+    "python": "revoke",
+    "method": "DELETE",
+    "path": "/v1/keys/{id}",
+    "idempotency": false
+  },
+  {
+    "operationId": "listWebhooks",
+    "resource": "webhooks",
+    "javascript": "list",
+    "python": "list",
+    "method": "GET",
+    "path": "/v1/webhooks",
+    "idempotency": false
+  },
+  {
+    "operationId": "createWebhook",
+    "resource": "webhooks",
+    "javascript": "create",
+    "python": "create",
+    "method": "POST",
+    "path": "/v1/webhooks",
+    "idempotency": false
+  },
+  {
+    "operationId": "deleteWebhook",
+    "resource": "webhooks",
+    "javascript": "delete",
+    "python": "delete",
+    "method": "DELETE",
+    "path": "/v1/webhooks/{id}",
+    "idempotency": false
+  },
+  {
+    "operationId": "getCredits",
+    "resource": "billing",
+    "javascript": "credits",
+    "python": "credits",
+    "method": "GET",
+    "path": "/v1/billing/credits",
+    "idempotency": false
+  },
+  {
+    "operationId": "listPacks",
+    "resource": "billing",
+    "javascript": "packs",
+    "python": "packs",
+    "method": "GET",
+    "path": "/v1/billing/packs",
+    "idempotency": false
+  },
+  {
+    "operationId": "createTopup",
+    "resource": "billing",
+    "javascript": "createTopup",
+    "python": "create_topup",
+    "method": "POST",
+    "path": "/v1/billing/topups",
+    "idempotency": false
+  },
+  {
+    "operationId": "getTopup",
+    "resource": "billing",
+    "javascript": "getTopup",
+    "python": "get_topup",
+    "method": "GET",
+    "path": "/v1/billing/topups/{id}",
+    "idempotency": false
+  },
+  {
+    "operationId": "getBillingSettings",
+    "resource": "billing",
+    "javascript": "settings",
+    "python": "settings",
+    "method": "GET",
+    "path": "/v1/billing/settings",
+    "idempotency": false
+  },
+  {
+    "operationId": "updateBillingSettings",
+    "resource": "billing",
+    "javascript": "updateSettings",
+    "python": "update_settings",
+    "method": "PATCH",
+    "path": "/v1/billing/settings",
+    "idempotency": false
+  },
+  {
+    "operationId": "setupPaymentMethod",
+    "resource": "billing",
+    "javascript": "setupPaymentMethod",
+    "python": "setup_payment_method",
+    "method": "POST",
+    "path": "/v1/billing/payment-methods/setup",
+    "idempotency": false
+  },
+  {
+    "operationId": "createBillingPortal",
+    "resource": "billing",
+    "javascript": "portal",
+    "python": "portal",
+    "method": "POST",
+    "path": "/v1/billing/portal",
+    "idempotency": false
+  },
+  {
+    "operationId": "unlinkPaymentMethod",
+    "resource": "billing",
+    "javascript": "unlinkPaymentMethod",
+    "python": "unlink_payment_method",
+    "method": "DELETE",
+    "path": "/v1/billing/payment-methods/{id}",
+    "idempotency": false
+  },
+  {
+    "operationId": "getMaterial",
+    "resource": "materials",
+    "javascript": "get",
+    "python": "get",
+    "method": "GET",
+    "path": "/v1/materials/{id}",
+    "idempotency": false
+  },
+  {
+    "operationId": "deleteMaterial",
+    "resource": "materials",
+    "javascript": "delete",
+    "python": "delete",
+    "method": "DELETE",
+    "path": "/v1/materials/{id}",
+    "idempotency": false
+  },
+  {
+    "operationId": "retryMaterial",
+    "resource": "materials",
+    "javascript": "retry",
+    "python": "retry",
+    "method": "POST",
+    "path": "/v1/materials/{id}/retry",
+    "idempotency": false
+  },
+  {
+    "operationId": "quoteJob",
+    "resource": "jobs",
+    "javascript": "quote",
+    "python": "quote",
+    "method": "POST",
+    "path": "/v1/jobs/quote",
+    "idempotency": false
+  },
+  {
+    "operationId": "getQuote",
+    "resource": "quotes",
+    "javascript": "get",
+    "python": "get",
+    "method": "GET",
+    "path": "/v1/quotes/{id}",
+    "idempotency": false
+  },
+  {
+    "operationId": "listCurricula",
+    "resource": "curricula",
+    "javascript": "list",
+    "python": "list",
+    "method": "GET",
+    "path": "/v1/curricula",
+    "idempotency": false
+  },
+  {
+    "operationId": "createCurriculum",
+    "resource": "curricula",
+    "javascript": "create",
+    "python": "create",
+    "method": "POST",
+    "path": "/v1/curricula",
+    "idempotency": false
+  },
+  {
+    "operationId": "quoteCurriculumPlanning",
+    "resource": "curricula",
+    "javascript": "quotePlanning",
+    "python": "quote_planning",
+    "method": "POST",
+    "path": "/v1/curricula/quote",
+    "idempotency": false
+  },
+  {
+    "operationId": "recommendCurricula",
+    "resource": "curricula",
+    "javascript": "recommend",
+    "python": "recommend",
+    "method": "POST",
+    "path": "/v1/curricula/recommendations",
+    "idempotency": false
+  },
+  {
+    "operationId": "importCurriculum",
+    "resource": "curricula",
+    "javascript": "importPlan",
+    "python": "import_plan",
+    "method": "POST",
+    "path": "/v1/curricula/import",
+    "idempotency": false
+  },
+  {
+    "operationId": "getCurriculum",
+    "resource": "curricula",
+    "javascript": "get",
+    "python": "get",
+    "method": "GET",
+    "path": "/v1/curricula/{id}",
+    "idempotency": false
+  },
+  {
+    "operationId": "editCurriculum",
+    "resource": "curricula",
+    "javascript": "edit",
+    "python": "edit",
+    "method": "POST",
+    "path": "/v1/curricula/{id}/versions",
+    "idempotency": false
+  },
+  {
+    "operationId": "approveCurriculum",
+    "resource": "curricula",
+    "javascript": "approve",
+    "python": "approve",
+    "method": "POST",
+    "path": "/v1/curricula/{id}/approve",
+    "idempotency": false
+  },
+  {
+    "operationId": "quoteCurriculumLessons",
+    "resource": "curricula",
+    "javascript": "quoteLessons",
+    "python": "quote_lessons",
+    "method": "POST",
+    "path": "/v1/curricula/{id}/quote",
+    "idempotency": false
+  },
+  {
+    "operationId": "generateCurriculumLessons",
+    "resource": "curricula",
+    "javascript": "generate",
+    "python": "generate",
+    "method": "POST",
+    "path": "/v1/curricula/{id}/generate",
+    "idempotency": true
+  },
+  {
+    "operationId": "cancelJob",
+    "resource": "jobs",
+    "javascript": "cancel",
+    "python": "cancel",
+    "method": "POST",
+    "path": "/v1/jobs/{id}/cancel",
+    "idempotency": false
+  },
+  {
+    "operationId": "getPackage",
+    "resource": "jobs",
+    "javascript": "package",
+    "python": "package",
+    "method": "GET",
+    "path": "/v1/jobs/{id}/package",
+    "idempotency": false
+  },
+  {
+    "operationId": "downloadPackage",
+    "resource": "jobs",
+    "javascript": "downloadPackage",
+    "python": "download_package",
+    "method": "GET",
+    "path": "/v1/jobs/{id}/download",
+    "idempotency": false
+  },
+  {
+    "operationId": "getPackageFile",
+    "resource": "jobs",
+    "javascript": "packageFile",
+    "python": "package_file",
+    "method": "GET",
+    "path": "/v1/jobs/{id}/package/files/{fileId}",
+    "idempotency": false
+  },
+  {
+    "operationId": "getLimits",
+    "resource": "organisation",
+    "javascript": "limits",
+    "python": "limits",
+    "method": "GET",
+    "path": "/v1/organisation/limits",
+    "idempotency": false
+  },
+  {
+    "operationId": "updateLimits",
+    "resource": "organisation",
+    "javascript": "updateLimits",
+    "python": "update_limits",
+    "method": "PATCH",
+    "path": "/v1/organisation/limits",
+    "idempotency": false
+  },
+  {
+    "operationId": "quoteRevision",
+    "resource": "jobs",
+    "javascript": "quoteRevision",
+    "python": "quote_revision",
+    "method": "POST",
+    "path": "/v1/jobs/{id}/revisions/quote",
+    "idempotency": false
+  },
+  {
+    "operationId": "quoteRetry",
+    "resource": "jobs",
+    "javascript": "quoteRetry",
+    "python": "quote_retry",
+    "method": "POST",
+    "path": "/v1/jobs/{id}/retry/quote",
+    "idempotency": false
+  },
+  {
+    "operationId": "retryJob",
+    "resource": "jobs",
+    "javascript": "retry",
+    "python": "retry",
+    "method": "POST",
+    "path": "/v1/jobs/{id}/retry",
+    "idempotency": true
+  }
+]
