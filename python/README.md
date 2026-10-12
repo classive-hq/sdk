@@ -2,7 +2,7 @@
 
 Synchronous and native asynchronous clients for the Classive Results API, on Python 3.11+.
 
-Install the wheel from the [GitHub release](https://github.com/classive-hq/sdk/releases/tag/v0.1.0), or run `python -m pip install ./python` from a clone of [classive-hq/sdk](https://github.com/classive-hq/sdk).
+Install the wheel from the [GitHub release](https://github.com/classive-hq/sdk/releases/tag/v0.1.1), or run `python -m pip install ./python` from a clone of [classive-hq/sdk](https://github.com/classive-hq/sdk).
 
 ```python
 from classive import Classive

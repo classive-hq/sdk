@@ -1,6 +1,6 @@
 {
   "name": "@classive/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JavaScript and TypeScript SDK for the Classive Results API",
   "type": "module",
   "main": "./javascript/dist/index.js",
@@ -17,7 +17,7 @@
     "check:generated": "node scripts/generate.mjs --check",
     "build": "tsc -p javascript/tsconfig.json && tsc -p javascript/tsconfig.cjs.json && node scripts/cjs.mjs",
     "test": "npm run check:generated && npm run build && node --test javascript/test/*.test.mjs",
-    "prepare": "npm run build"
+    "prepack": "npm run build"
   },
   "devDependencies": {"@types/node": "^22.0.0", "typescript": "~5.9.3"}
 }

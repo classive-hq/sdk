@@ -80,7 +80,7 @@ export class Transport {
     const timeout=positive(options.timeoutMs??this.timeoutMs,'timeoutMs'),deadline=Date.now()+timeout;
     const controller=new AbortController();const abort=()=>controller.abort();
     if (options.signal?.aborted) throw new AbortError('The request was aborted.',0,'aborted');
-    const headers: Record<string,string>={Authorization:`Bearer ${this.key}`,Accept:'application/json, */*','X-Classive-SDK':'javascript/0.1.0'};
+    const headers: Record<string,string>={Authorization:`Bearer ${this.key}`,Accept:'application/json, */*','X-Classive-SDK':'javascript/0.1.1'};
     if(input!==undefined) headers['Content-Type']='application/json';
     if (options.idempotencyKey!==undefined) {
       if (!options.idempotencyKey.trim()||options.idempotencyKey.length>200||/[\r\n]/.test(options.idempotencyKey)) throw new ValidationError('idempotencyKey must contain 1–200 characters without newlines.');

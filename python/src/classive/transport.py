@@ -40,7 +40,7 @@ class Configuration:
         if not isinstance(max_retries, int) or not 0 <= max_retries <= 10:
             raise ValidationError("max_retries must be an integer from 0 to 10.")
         self.max_retries = max_retries
-        self._headers = {"Authorization": f"Bearer {key.strip()}", "Accept": "application/json, */*", "X-Classive-SDK": "python/0.1.0"}
+        self._headers = {"Authorization": f"Bearer {key.strip()}", "Accept": "application/json, */*", "X-Classive-SDK": "python/0.1.1"}
 
     def prepare(self, path: str, query: dict[str, Any] | None, options: RequestOptions | None):
         if not path.startswith("/") or path.startswith("//") or any(p in (".", "..") for p in path.split("/")):

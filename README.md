@@ -8,17 +8,17 @@ Language guides: [JavaScript and TypeScript](javascript/README.md) · [Python](p
 
 ## Install
 
-Install the built packages from the [v0.1.0 release](https://github.com/classive-hq/sdk/releases/tag/v0.1.0):
+Install the built packages from the [v0.1.1 release](https://github.com/classive-hq/sdk/releases/tag/v0.1.1):
 
 ```sh
-npm install https://github.com/classive-hq/sdk/releases/download/v0.1.0/classive-sdk-0.1.0.tgz
+npm install https://github.com/classive-hq/sdk/releases/download/v0.1.1/classive-sdk-0.1.1.tgz
 ```
 
 ```sh
-python -m pip install https://github.com/classive-hq/sdk/releases/download/v0.1.0/classive_sdk-0.1.0-py3-none-any.whl
+python -m pip install https://github.com/classive-hq/sdk/releases/download/v0.1.1/classive_sdk-0.1.1-py3-none-any.whl
 ```
 
-Registry publishing is pending; `npm install @classive/sdk` and `pip install classive-sdk` are not advertised as available yet. You can also clone this repository and run `npm install` or `python -m pip install ./python`.
+Registry publishing is pending; `npm install @classive/sdk` and `pip install classive-sdk` are not advertised as available yet. You can also clone this repository and run `npm install && npm run build` or `python -m pip install ./python`.
 
 Create a REST API key in your [dashboard](https://classive.app/app/keys) and set `CLASSIVE_API_KEY` in your server environment. MCP keys are different and cannot authenticate this SDK. Keep the key out of browser code and source control.
 
