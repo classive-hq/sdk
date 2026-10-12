@@ -8,7 +8,7 @@ from .helpers import WaitOptions, UploadMetadata
 from .webhooks import verify_webhook
 from . import types
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __all__ = ["Classive", "AsyncClassive", "ClassiveError", "AuthenticationError", "PermissionError", "ValidationError",
     "InsufficientCreditsError", "NotFoundError", "ConflictError", "RateLimitError", "ServiceError", "NetworkError",
     "TimeoutError", "ProtocolError", "JobFailedError", "JobCancelledError", "MaterialFailedError",

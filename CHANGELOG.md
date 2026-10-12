@@ -1,10 +1,12 @@
 # Changelog
 
-## JavaScript 0.1.2 — 2026-10-13
+## 0.1.2 — 2026-10-13
 
 - Update installation instructions for npm and remove publishing-status commentary.
 - Use GitHub URLs for guides and examples so links work on the npm package page.
-- Python remains at 0.1.1.
+- Publish the JavaScript directory as its own package with a language-specific README.
+- Add author, keywords, package-directory and publishing metadata to JavaScript.
+- Add author, keywords, classifiers and project links to Python.
 
 ## 0.1.1 — 2026-10-12
 

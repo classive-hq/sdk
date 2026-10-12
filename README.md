@@ -17,7 +17,7 @@ npm install @classive/sdk
 Install Python:
 
 ```sh
-python -m pip install https://github.com/classive-hq/sdk/releases/download/v0.1.1/classive_sdk-0.1.1-py3-none-any.whl
+python -m pip install classive-sdk
 ```
 
 Create a REST API key in your [dashboard](https://classive.app/app/keys) and set `CLASSIVE_API_KEY` in your server environment. MCP keys are different and cannot authenticate this SDK. Keep the key out of browser code and source control.
@@ -169,5 +169,7 @@ python -m build python
 ```
 
 `schema/openapi.json` is a snapshot of the live public contract, with its source hash in `schema/source.json`. `npm run generate` regenerates the method facades and types for both languages; `npm run check:generated` catches drift. Update the snapshot deliberately, review additions and changes, map new operation names in `scripts/generate.mjs`, regenerate and run both suites before releasing.
+
+The repository root is a private npm workspace. Publish JavaScript from `javascript/` with `npm publish --workspace=@classive/sdk`; this packages its own README and metadata. Build Python with `python -m build python`, then upload the selected wheel and source archive with Twine. Each language has its own manifest, README and changelog.
 
 API reference: [classive.app/api](https://classive.app/api). Current documentation: [classive.app/docs](https://classive.app/docs), [machine-readable index](https://classive.app/llms.txt).

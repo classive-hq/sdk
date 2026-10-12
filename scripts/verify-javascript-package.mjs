@@ -8,7 +8,7 @@ import {fixture,json,job} from '../javascript/test/fixture.mjs';
 const root=resolve(fileURLToPath(new URL('..',import.meta.url)));
 const dir=await mkdtemp(join(tmpdir(),'classive-consumer-'));
 try {
-  const packed=JSON.parse(execFileSync('npm',['pack','--json','--pack-destination',dir],{cwd:root,encoding:'utf8'}))[0];
+  const packed=JSON.parse(execFileSync('npm',['pack','--workspace=@classive/sdk','--json','--pack-destination',dir],{cwd:root,encoding:'utf8'}))[0];
   const tar=join(dir,packed.filename);
   await writeFile(join(dir,'package.json'),JSON.stringify({type:'module',private:true}));
   execFileSync('npm',['install','--no-audit','--no-fund',tar],{cwd:dir,stdio:'pipe'});

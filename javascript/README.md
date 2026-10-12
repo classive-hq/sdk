@@ -1,6 +1,8 @@
 # Classive JavaScript and TypeScript SDK
 
-Build teaching clips, lessons, written resources, document reviews and courses with the [Classive API](https://classive.app/api). The client supports Node.js 20+, ESM, CommonJS and typed request/response autocomplete.
+Create teaching clips, lessons, written resources, document reviews and courses with the [Classive API](https://classive.app/api). Supports Node.js 20+, ESM, CommonJS and typed request/response autocomplete.
+
+## Install
 
 ```sh
 npm install @classive/sdk
@@ -8,13 +10,42 @@ npm install @classive/sdk
 
 ```js
 import { Classive } from '@classive/sdk';
-const client = new Classive(); // Server-side CLASSIVE_API_KEY.
+const client = new Classive(); // Reads server-side CLASSIVE_API_KEY.
 const voices = await client.voices.list();
 console.log(voices.data);
 ```
 
-For TypeScript, request and response types are exported from the same package. CommonJS applications use `const { Classive } = require('@classive/sdk')`.
+Create a REST API key in your [dashboard](https://classive.app/app/keys) and keep `CLASSIVE_API_KEY` in your server environment. CommonJS applications use `const { Classive } = require('@classive/sdk')`.
 
-Use `jobs.quote`, explicitly accept the quote with `jobs.create`, then `jobs.wait` or receive webhooks. Helpers support material extraction readiness, cursor pagination and streamed downloads. Mutations never retry automatically, and local cancellation never cancels server work.
+## Create a lesson
 
-See the [quickstart](../README.md#javascript--typescript), [workflow examples](../docs/workflows.md), [complete method reference](../docs/reference.md) and [runnable lesson example](../examples/javascript/lesson.mjs). All 52 operations in the public contract are supported. Keep the API key in your server environment; an SDK is not a way to safely expose a secret in learner browsers.
+Request a quote, check it against your spending policy, then accept it. Calling `create` starts paid generation.
+
+```ts
+import { Classive, type CreateLesson } from '@classive/sdk';
+
+const client = new Classive();
+const input: CreateLesson = {
+  type: 'lesson',
+  prompt: 'Teach adding fractions with unlike denominators.',
+  audience: { band: 'primary', grade: 'Year 5' },
+  outputs: ['notes', 'quiz'],
+};
+
+const quote = await client.jobs.quote(input);
+console.log('Quoted credits:', quote.credits);
+const job = await client.jobs.create(
+  { ...input, quoteId: quote.id },
+  { idempotencyKey: 'fractions-lesson-1' },
+);
+const finished = await client.jobs.wait(job.id);
+console.log(finished.results);
+```
+
+For plain JavaScript, omit the type import and annotation. Use a stable idempotency key when deliberately repeating the same submission.
+
+The SDK covers all 52 public operations, with helpers for material uploads, extraction readiness, cursor pagination, streamed downloads and webhook verification. Mutations never retry automatically. Aborting a local wait does not cancel server work; use `jobs.cancel(id)` explicitly.
+
+See the [workflow examples](https://github.com/classive-hq/sdk/blob/main/docs/workflows.md), [method reference](https://github.com/classive-hq/sdk/blob/main/docs/reference.md), [runnable example](https://github.com/classive-hq/sdk/blob/main/examples/javascript/lesson.mjs) and [API reference](https://classive.app/api).
+
+Looking for Python? See the [Python SDK](https://github.com/classive-hq/sdk/blob/main/python/README.md).

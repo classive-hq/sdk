@@ -1,0 +1,63 @@
+{
+  "name": "@classive/sdk",
+  "version": "0.1.2",
+  "description": "Official JavaScript and TypeScript SDK for the Classive educational content API",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist-cjs/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "dist-cjs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/classive-hq/sdk.git",
+    "directory": "javascript"
+  },
+  "homepage": "https://github.com/classive-hq/sdk/tree/main/javascript#readme",
+  "bugs": {
+    "url": "https://github.com/classive-hq/sdk/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node ../scripts/cjs.mjs",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.9.3"
+  },
+  "author": {
+    "name": "Classive Ltd",
+    "url": "https://classive.app"
+  },
+  "keywords": [
+    "classive",
+    "sdk",
+    "api-client",
+    "typescript",
+    "javascript",
+    "education",
+    "edtech",
+    "lesson-generation",
+    "course-generation"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
