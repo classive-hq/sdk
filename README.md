@@ -170,4 +170,4 @@ python -m build python
 
 `schema/openapi.json` is a snapshot of the live public contract, with its source hash in `schema/source.json`. `npm run generate` regenerates the method facades and types for both languages; `npm run check:generated` catches drift. Update the snapshot deliberately, review additions and changes, map new operation names in `scripts/generate.mjs`, regenerate and run both suites before releasing.
 
-API reference: [classive.app/api](https://classive.app/api). Current documentation: [classive.app/docs](https://classive.app/docs), [machine-readable index](https://classive.app/llms.txt). This SDK is an initial 0.1 release; pin your version. It does not certify the teaching pipeline's quality or reliability.
+API reference: [classive.app/api](https://classive.app/api). Current documentation: [classive.app/docs](https://classive.app/docs), [machine-readable index](https://classive.app/llms.txt).
