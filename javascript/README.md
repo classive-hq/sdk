@@ -3,7 +3,7 @@
 Build teaching clips, lessons, written resources, document reviews and courses with the [Classive API](https://classive.app/api). The client supports Node.js 20+, ESM, CommonJS and typed request/response autocomplete.
 
 ```sh
-npm install https://github.com/classive-hq/sdk/releases/download/v0.1.1/classive-sdk-0.1.1.tgz
+npm install @classive/sdk
 ```
 
 ```js
